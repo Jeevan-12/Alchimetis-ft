@@ -48,7 +48,7 @@ const Data = ({ setTheme, theme }) => {
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        rowGap: '10px',
+        rowGap: '20px',
       }}
     >
       <Header setTheme={setTheme} theme={theme}>
@@ -58,27 +58,136 @@ const Data = ({ setTheme, theme }) => {
         <table
           style={{
             width: '100%',
+            border:
+              theme.color == 'white' ? '1px solid white' : '1px solid black',
+            // borderCollapse: 'collapse',
           }}
         >
           <thead>
-            <tr>
-              <th>Sl No</th>
-              <th>Profile</th>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Gender</th>
-              <th>Blood Group</th>
-              <th>City</th>
-              <th>Country</th>
-              <th>Contact No</th>
+            <tr
+              style={{
+                border:
+                  theme.color == 'white'
+                    ? '1px solid white'
+                    : '1px solid black',
+              }}
+            >
+              <th
+                style={{
+                  border:
+                    theme.color == 'white'
+                      ? '1px solid white'
+                      : '1px solid black',
+                }}
+              >
+                Sl No
+              </th>
+              <th
+                style={{
+                  border:
+                    theme.color == 'white'
+                      ? '1px solid white'
+                      : '1px solid black',
+                }}
+              >
+                Profile
+              </th>
+              <th
+                style={{
+                  border:
+                    theme.color == 'white'
+                      ? '1px solid white'
+                      : '1px solid black',
+                }}
+              >
+                Name
+              </th>
+              <th
+                style={{
+                  border:
+                    theme.color == 'white'
+                      ? '1px solid white'
+                      : '1px solid black',
+                }}
+              >
+                Age
+              </th>
+              <th
+                style={{
+                  border:
+                    theme.color == 'white'
+                      ? '1px solid white'
+                      : '1px solid black',
+                }}
+              >
+                Gender
+              </th>
+              <th
+                style={{
+                  border:
+                    theme.color == 'white'
+                      ? '1px solid white'
+                      : '1px solid black',
+                }}
+              >
+                Blood Group
+              </th>
+              <th
+                style={{
+                  border:
+                    theme.color == 'white'
+                      ? '1px solid white'
+                      : '1px solid black',
+                }}
+              >
+                City
+              </th>
+              <th
+                style={{
+                  border:
+                    theme.color == 'white'
+                      ? '1px solid white'
+                      : '1px solid black',
+                }}
+              >
+                Country
+              </th>
+              <th
+                style={{
+                  border:
+                    theme.color == 'white'
+                      ? '1px solid white'
+                      : '1px solid black',
+                }}
+              >
+                Contact No
+              </th>
             </tr>
           </thead>
           <tbody>
             {tableData.map((item, index) => {
               return (
                 <tr key={index}>
-                  <td align="center">{index + 1}</td>
-                  <td align="center">
+                  <td
+                    align="center"
+                    style={{
+                      border:
+                        theme.color == 'white'
+                          ? '1px solid white'
+                          : '1px solid black',
+                    }}
+                  >
+                    {index + 1}
+                  </td>
+                  <td
+                    align="center"
+                    style={{
+                      border:
+                        theme.color == 'white'
+                          ? '1px solid white'
+                          : '1px solid black',
+                    }}
+                  >
                     {item.gender.toLowerCase() == 'male' ? (
                       <img
                         src={
@@ -107,13 +216,83 @@ const Data = ({ setTheme, theme }) => {
                       />
                     )}
                   </td>
-                  <td align="center">{item.name}</td>
-                  <td align="center">{item.age}</td>
-                  <td align="center">{item.gender}</td>
-                  <td align="center">{item['Blood Group']}</td>
-                  <td align="center">{item.city}</td>
-                  <td align="center">{item.country}</td>
-                  <td align="center">{item['contact number']}</td>
+                  <td
+                    align="center"
+                    style={{
+                      border:
+                        theme.color == 'white'
+                          ? '1px solid white'
+                          : '1px solid black',
+                    }}
+                  >
+                    {item.name}
+                  </td>
+                  <td
+                    align="center"
+                    style={{
+                      border:
+                        theme.color == 'white'
+                          ? '1px solid white'
+                          : '1px solid black',
+                    }}
+                  >
+                    {item.age}
+                  </td>
+                  <td
+                    align="center"
+                    style={{
+                      border:
+                        theme.color == 'white'
+                          ? '1px solid white'
+                          : '1px solid black',
+                    }}
+                  >
+                    {item.gender}
+                  </td>
+                  <td
+                    align="center"
+                    style={{
+                      border:
+                        theme.color == 'white'
+                          ? '1px solid white'
+                          : '1px solid black',
+                    }}
+                  >
+                    {item['Blood Group']}
+                  </td>
+                  <td
+                    align="center"
+                    style={{
+                      border:
+                        theme.color == 'white'
+                          ? '1px solid white'
+                          : '1px solid black',
+                    }}
+                  >
+                    {item.city}
+                  </td>
+                  <td
+                    align="center"
+                    style={{
+                      border:
+                        theme.color == 'white'
+                          ? '1px solid white'
+                          : '1px solid black',
+                    }}
+                  >
+                    {item.country}
+                  </td>
+                  <td
+                    align="center"
+                    style={{
+                      border:
+                        theme.color == 'white'
+                          ? '1px solid white'
+                          : '1px solid black',
+                    }}
+                  >
+                    {item['contact number']}
+                  </td>
                 </tr>
               );
             })}
